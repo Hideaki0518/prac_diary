@@ -1,5 +1,5 @@
 {% load static %}
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>One Page Wonder - Start Bootstrap Template</title>
+  <title>{% block title %}{% endblock %}</title>
 
   <!-- Bootstrap core CSS -->
   <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -21,6 +21,10 @@
   <!-- Custom styles for this template -->
   <link href="{% static 'css/one-page-wonder.min.css' %}" rel="stylesheet">
 
+  <!-- My styles for this template -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+
+  {% block head %}{% endblock %}
 </head>
 
 <body>
@@ -28,12 +32,15 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <a class="navbar-brand" href="{% url 'diary:index' %}">Start Bootstrap</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item {% block active_inquiry %}{% endblock%}">
+            <a class="nav-link" href="#">INQUIRY</a>
+          </li> 
           <li class="nav-item">
             <a class="nav-link" href="#">Sign Up</a>
           </li>
