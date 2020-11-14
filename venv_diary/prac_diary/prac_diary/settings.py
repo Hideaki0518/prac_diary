@@ -138,6 +138,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
 # Logging settings
 LOGGING = {
     'version': 1,
