@@ -1,0 +1,6 @@
+/.vscode
+/venv_diary/Include
+/venv_diary/Lib
+/venv_diary/Scripts
+/venv_diary/pyvenv.cfg
+*.pyc
