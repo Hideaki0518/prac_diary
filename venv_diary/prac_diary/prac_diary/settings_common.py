@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'diary.apps.DiaryConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -184,3 +185,5 @@ MESSAGE_TAGS = {
     messages.INFO: 'alert alert-info',
 
 }
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
